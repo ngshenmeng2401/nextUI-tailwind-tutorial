@@ -1,9 +1,9 @@
-import { Button } from "@nextui-org/react";
+import NavBarComponent from "@/components/navbar";
 
 export default function Home() {
   return (
    <div>
-    <Button>Click me</Button>
+    <NavBarComponent/>
    </div>
   );
 }
