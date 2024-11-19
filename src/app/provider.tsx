@@ -1,12 +1,15 @@
 // app/providers.tsx
-'use client'
 
-import {NextUIProvider} from '@nextui-org/react'
+import { NextUIProvider } from "@nextui-org/react";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
 
-export function Providers({children}: { children: React.ReactNode }) {
+export async function Providers({ children }: { children: React.ReactNode }) {
+  const messages = await getMessages();
+
   return (
-    <NextUIProvider>
-      {children}
-    </NextUIProvider>
-  )
+    <NextIntlClientProvider messages={messages}>
+      <NextUIProvider>{children}</NextUIProvider>
+    </NextIntlClientProvider>
+  );
 }
