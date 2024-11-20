@@ -5,6 +5,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary-color: #202039;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,4 +25,49 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.searchBar {
+  height: 20px;
+  width: 100%;
+  padding: 18px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  background: #202038;
+  font-size: 13px;
+}
+
+.search_bar_drop_down {
+  line-height: 30px;
+  border-radius: 5px;
+  text-align: center;
+  border: 1px solid #6001ff;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+}
+
+.search_bar_drop_down:focus {
+  outline: none;
+  /* Remove outline on focus */
+  border-color: #6001ff;
+}
+
+.list-sun-swap-btn {
+  line-height: 30px;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid #6001ff;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+}
+
+.refresh-button {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  border: 1px solid #6001ff;
+  background-color: #6001ff;
 }

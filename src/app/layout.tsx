@@ -1,7 +1,10 @@
+import { config as faConfig } from "@fortawesome/fontawesome-svg-core";
 import type { Metadata } from "next";
 import "./globals.css";
 import { Providers } from "./provider";
 import { getLocale } from "next-intl/server";
+
+faConfig.autoAddCss = false;
 
 export const metadata: Metadata = {
   title: "Create Next App",
