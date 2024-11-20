@@ -23,10 +23,16 @@ export default function NavBarComponent() {
 
   return (
     <div>
-      <Navbar maxWidth="xl" isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
-      <NavbarContent className="sm:hidden" justify="start">
-        <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} />
-      </NavbarContent>
+      <Navbar
+        maxWidth="xl"
+        isMenuOpen={isMenuOpen}
+        onMenuOpenChange={setIsMenuOpen}
+      >
+        <NavbarContent className="sm:hidden" justify="start">
+          <NavbarMenuToggle
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          />
+        </NavbarContent>
         <NavbarContent className="pr-3" justify="center">
           <NavbarBrand hidden={true}>
             <Image width={100} height={80} alt="logo" src={siteLogo} />
@@ -42,15 +48,15 @@ export default function NavBarComponent() {
             </NavbarItem>
           ))}
         </NavbarContent>
-        <NavbarMenu style={{backgroundColor:"black"}}>
-        {navbarItemList.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
-            <Link href={item.url} style={{ color: "white" }}>
+        <NavbarMenu style={{ backgroundColor: "black" }}>
+          {navbarItemList.map((item, index) => (
+            <NavbarMenuItem key={`${item}-${index}`}>
+              <Link href={item.url} style={{ color: "white" }}>
                 {lang(item.label)}
               </Link>
-          </NavbarMenuItem>
-        ))}
-      </NavbarMenu>
+            </NavbarMenuItem>
+          ))}
+        </NavbarMenu>
         <NavbarContent justify="end">
           <LanguageSwitcher />
         </NavbarContent>
