@@ -42,10 +42,11 @@ body {
   border-radius: 5px;
   text-align: center;
   border: 1px solid #6001ff;
-  background-color: transparent;
+  background-color: #121212;
   width: 100%;
   height: 100%;
   font-size: 14px;
+  color: "white";
 }
 
 .search_bar_drop_down:focus {
