@@ -2,6 +2,8 @@
 import { languageList } from "@/config/languageSwitcher";
 import { defaultLocale, Locale } from "@/i18n/config";
 import { getUserLocale, setUserLocale } from "@/services/locale";
+import { faGlobe } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   Button,
   Dropdown,
@@ -58,8 +60,8 @@ const LanguageSwitcher = () => {
       <DropdownTrigger>
         <Button variant="bordered" className="capitalize" size="sm">
             {/* sizing problem when reload page */}
-          {/* <FontAwesomeIcon icon={faGlobe} size="1x"/> */}
-          {lang("language_text")}
+          <FontAwesomeIcon icon={faGlobe} className="w-4 h-4"/>
+          {/* {lang("language_text")} */}
         </Button>
       </DropdownTrigger>
       <DropdownMenu
