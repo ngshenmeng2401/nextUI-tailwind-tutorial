@@ -23,7 +23,7 @@ export default function NavBarComponent() {
 
   return (
     <Navbar
-      maxWidth="xl"
+      maxWidth="full"
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
       className="mb-6"
